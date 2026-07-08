@@ -1,16 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
-    
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxe Aura - Featured Collections &amp; Deal of the Day</title>
+
+  <link rel="stylesheet" href="./imasa-style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
 </head>
+
 <body>
-    
-<h2>My name is imasa this is my html file</h2>
-    <h1>This my html file is update</h1>
+
+
+  <!--
+    - FEATURED COLLECTIONS
+  -->
+  <div class="featured-collections">
+
+    <div class="container">
+
+      <h2 class="section-title">Featured Collections</h2>
+
+      <div class="collections-grid">
+
+        <div class="collection-card">
+          <a href="#">
+            <div class="collection-img-wrap">
+              <img src="./assets/images/mens-banner.jpg" alt="Men's Essentials" class="collection-img">
+            </div>
+            <div class="collection-info">
+              <h3 class="collection-name">Men's Essentials</h3>
+              <p class="collection-sub">Curated collections</p>
+              <span class="collection-link">Learn More &#8594;</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="collection-card">
+          <a href="#">
+            <div class="collection-img-wrap">
+              <img src="./assets/images/womens-banner.jpg" alt="Women's Style" class="collection-img">
+            </div>
+            <div class="collection-info">
+              <h3 class="collection-name">Women's Style</h3>
+              <p class="collection-sub">Curated collections</p>
+              <span class="collection-link">Learn More &#8594;</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="collection-card">
+          <a href="#">
+            <div class="collection-img-wrap">
+              <img src="./assets/images/electronics-banner-1.jpg" alt="Accessories" class="collection-img">
+            </div>
+            <div class="collection-info">
+              <h3 class="collection-name">Accessories</h3>
+              <p class="collection-sub">Curated one of collections</p>
+              <span class="collection-link">Learn More &#8594;</span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!--
+    - DEAL OF THE DAY
+  -->
+  <div class="product-featured">
+
+    <div class="container">
+
+      <h2 class="title">Deal of the day</h2>
+
+      <div class="showcase-wrapper has-scrollbar">
+
+        <div class="showcase-container">
+
+          <div class="showcase">
+
+            <div class="showcase-banner">
+              <img src="./assets/images/products/perfume.jpg" alt="Luxe Signature Perfume" class="showcase-img">
+            </div>
+
+            <div class="showcase-content">
+
+              <div class="showcase-rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+              </div>
+
+              <a href="#">
+                <h3 class="showcase-title">Luxe Signature Perfume</h3>
+              </a>
+
+              <p class="showcase-desc">
+                A captivating blend of floral and woody notes. Long-lasting fragrance for all occasions.
+              </p>
+
+              <div class="price-box">
+                <p class="price">$89.00</p>
+                <del>$150.00</del>
+              </div>
+
+              <button class="add-cart-btn">add to cart</button>
+
+              <div class="showcase-status">
+                <div class="wrapper">
+                  <p>already sold: <b>42</b></p>
+                  <p>available: <b>58</b></p>
+                </div>
+                <div class="showcase-status-bar"></div>
+              </div>
+
+              <div class="countdown-box">
+
+                <p class="countdown-desc">Hurry Up! Offer ends in:</p>
+
+                <div class="countdown" id="deal-countdown">
+
+                  <div class="countdown-content">
+                    <p class="display-number" id="countdown-hours">00</p>
+                    <p class="display-text">Hours</p>
+                  </div>
+
+                  <div class="countdown-content">
+                    <p class="display-number" id="countdown-mins">00</p>
+                    <p class="display-text">Min</p>
+                  </div>
+
+                  <div class="countdown-content">
+                    <p class="display-number" id="countdown-secs">00</p>
+                    <p class="display-text">Sec</p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="showcase-container">
+
+          <div class="showcase">
+
+            <div class="showcase-banner">
+              <img src="./assets/images/products/watch-1.jpg" alt="Luxury Smart Watch" class="showcase-img">
+            </div>
+
+            <div class="showcase-content">
+
+              <div class="showcase-rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+              </div>
+
+              <a href="#">
+                <h3 class="showcase-title">Luxury Smart Watch</h3>
+              </a>
+
+              <p class="showcase-desc">
+                Elegant timepiece with premium leather strap. Track your lifestyle in style.
+              </p>
+
+              <div class="price-box">
+                <p class="price">$199.00</p>
+                <del>$320.00</del>
+              </div>
+
+              <button class="add-cart-btn">add to cart</button>
+
+              <div class="showcase-status">
+                <div class="wrapper">
+                  <p>already sold: <b>28</b></p>
+                  <p>available: <b>32</b></p>
+                </div>
+                <div class="showcase-status-bar"></div>
+              </div>
+
+              <div class="countdown-box">
+
+                <p class="countdown-desc">Hurry Up! Offer ends in:</p>
+
+                <div class="countdown">
+
+                  <div class="countdown-content">
+                    <p class="display-number deal-hours">00</p>
+                    <p class="display-text">Hours</p>
+                  </div>
+
+                  <div class="countdown-content">
+                    <p class="display-number deal-mins">00</p>
+                    <p class="display-text">Min</p>
+                  </div>
+
+                  <div class="countdown-content">
+                    <p class="display-number deal-secs">00</p>
+                    <p class="display-text">Sec</p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script>
+    function startCountdown() {
+      const dealEnd = new Date();
+      dealEnd.setHours(dealEnd.getHours() + 12);
+
+      function updateCountdown() {
+        const now = new Date();
+        const diff = dealEnd - now;
+
+        if (diff <= 0) {
+          document.querySelectorAll('.display-number').forEach(el => el.textContent = '00');
+          return;
+        }
+
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const secs = Math.floor((diff % (1000 * 60)) / 1000);
+        const pad = n => String(n).padStart(2, '0');
+
+        const h1 = document.getElementById('countdown-hours');
+        const m1 = document.getElementById('countdown-mins');
+        const s1 = document.getElementById('countdown-secs');
+        if (h1) h1.textContent = pad(hours);
+        if (m1) m1.textContent = pad(mins);
+        if (s1) s1.textContent = pad(secs);
+
+        document.querySelectorAll('.deal-hours').forEach(el => el.textContent = pad(hours));
+        document.querySelectorAll('.deal-mins').forEach(el => el.textContent = pad(mins));
+        document.querySelectorAll('.deal-secs').forEach(el => el.textContent = pad(secs));
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    }
+
+    document.addEventListener('DOMContentLoaded', startCountdown);
+  </script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
+
 </html>
