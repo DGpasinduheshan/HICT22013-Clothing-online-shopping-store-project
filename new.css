@@ -1,0 +1,192 @@
+:root {
+  --spanish-gray: hsl(0, 0%, 60%);
+  --sonic-silver: hsl(0, 0%, 47%);
+  --eerie-black: hsl(0, 0%, 13%);
+  --salmon-pink: hsl(353, 100%, 78%);
+  --sandy-brown: hsl(29, 90%, 65%);
+  --cultured: hsl(0, 0%, 93%);
+  --white: hsl(0, 100%, 100%);
+  --onyx: hsl(0, 0%, 27%);
+
+  --fs-2: 1.375rem;
+  --fs-7: 0.875rem;
+  --fs-8: 0.813rem;
+  --fs-9: 0.75rem;
+  --fs-10: 0.688rem;
+
+  --weight-500: 500;
+  --weight-600: 600;
+  --weight-700: 700;
+
+  --border-radius-md: 10px;
+  --border-radius-sm: 5px;
+
+  --transition-timing: 0.2s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+a { text-decoration: none; }   /* <-- kills the blue underline you're seeing */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.product-main { margin-bottom: 40px; }
+
+.product-main .title {
+  font-size: var(--fs-2);
+  font-weight: var(--weight-600);
+  color: var(--eerie-black);
+  text-align: center;
+  padding: 25px 0 20px;
+}
+
+/* ---- GRID: outer card layout ---- */
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+@media (min-width: 600px) {
+  .product-grid { grid-template-columns: 1fr 1fr 1fr 1fr; }
+}
+
+.product-grid .showcase {
+  border: 1px solid var(--cultured);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  transition: box-shadow var(--transition-timing);
+}
+
+.product-grid .showcase:hover { box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1); }
+
+/* ---- THIS is critical: badge/actions are positioned relative to this ---- */
+.product-grid .showcase-banner { position: relative; }
+
+/* ---- Fixes the "full-size uncropped image" problem ---- */
+.product-grid .product-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: opacity var(--transition-timing), transform 0.5s ease;
+}
+
+.product-grid .product-img.default { position: relative; opacity: 1; }
+
+.product-grid .product-img.hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.product-grid .showcase:hover .product-img.hover { opacity: 1; }
+.product-grid .showcase:hover .product-img.default { opacity: 0; }
+.product-grid .showcase:hover .product-img { transform: scale(1.1); }
+
+/* ---- Fixes badge floating on the image instead of below it ---- */
+.product-grid .showcase-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--salmon-pink);
+  color: var(--white);
+  font-size: var(--fs-10);
+  font-weight: var(--weight-600);
+  padding: 3px 8px;
+  border-radius: var(--border-radius-sm);
+}
+
+.product-grid .showcase-badge.angle {
+  top: 0; left: 0;
+  border-radius: 0 0 var(--border-radius-sm) 0;
+  padding: 5px 12px;
+}
+
+.product-grid .showcase-badge.black { background: var(--eerie-black); }
+.product-grid .showcase-badge.pink { background: var(--salmon-pink); }
+
+/* ---- Fixes action icons floating on the image instead of below it ---- */
+.product-grid .showcase-actions {
+  position: absolute;
+  top: 10px;
+  right: -40px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: right var(--transition-timing);
+}
+
+.product-grid .showcase:hover .showcase-actions { right: 10px; }
+
+.product-grid .btn-action {
+  background: var(--white);
+  border: 1px solid var(--cultured);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--onyx);
+  cursor: pointer;
+  transition: background var(--transition-timing), color var(--transition-timing);
+}
+
+.product-grid .btn-action:hover {
+  background: var(--salmon-pink);
+  color: var(--white);
+  border-color: var(--salmon-pink);
+}
+
+.product-grid .showcase-content { padding: 12px 15px 15px; }
+
+.product-grid .showcase-category {
+  display: block;
+  font-size: var(--fs-10);
+  color: var(--salmon-pink);
+  text-transform: uppercase;
+  font-weight: var(--weight-500);
+  margin-bottom: 5px;
+}
+
+.product-grid .showcase-title {
+  font-size: var(--fs-8);
+  font-weight: var(--weight-600);
+  color: var(--eerie-black);
+  line-height: 1.4;
+  margin-bottom: 6px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-grid .showcase-title:hover { color: var(--salmon-pink); }
+
+.product-grid .showcase-rating {
+  display: flex;
+  gap: 2px;
+  color: var(--sandy-brown);
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.product-grid .price-box {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.product-grid .price {
+  font-size: var(--fs-7);
+  font-weight: var(--weight-700);
+  color: var(--eerie-black);
+}
+
+.product-grid del { color: var(--sonic-silver); font-size: var(--fs-9); }
