@@ -20,7 +20,7 @@
 
 
  
-  <div class="featured-collections">
+  <div class="feature-collection">
 
     <div class="container">
 
@@ -29,7 +29,7 @@
       <div class="collections-grid">
 
         <div class="collection-card">
-          <a href="#">
+          <a href="#"
             <div class="collection-img-wrap">
               <img src="./assets/images/mens-banner.jpg" alt="Men's Essentials" class="collection-img">
             </div>
@@ -244,7 +244,7 @@
         const now = new Date();
         const diff = dealEnd - now;
 
-        if (diff <= 0) {
+        if(diff<0){
           document.querySelectorAll('.display-number').forEach(el => el.textContent = '00');
           return;
         }
