@@ -197,7 +197,7 @@ body { background: var(--white); }
 }
 
 .product-featured .showcase-wrapper {
-  display: flex;
+  display:flex;
   gap: 30px;
   overflow-x: auto;
   padding-bottom: 15px;
@@ -294,9 +294,10 @@ body { background: var(--white); }
 }
 
 .product-featured .showcase-status-bar {
-  height: 6px;
+  height:6px;
   background: var(--cultured);
   border-radius: 10px;
+ 
 }
 
 .product-featured .showcase-status-bar::before {
@@ -320,7 +321,7 @@ body { background: var(--white); }
 }
 
 .product-featured .countdown-content {
-  text-align: center;
+  text-align:center
   background: var(--eerie-black);
   color: var(--white);
   padding: 6px 10px;
